@@ -1,0 +1,33 @@
+<html>
+<head> <title> BOM </title>
+	<script>
+		//window.alert("Hello");
+		//alert("this is from alert");
+		//console.log("this is from console");	//doesnt show anything on the webpage (rints in js terminal), only for debugging
+		//document.write("this is from document");
+		
+		function change(){
+			document.getElementById("c1").innerHTML="All the best";	
+			
+		}
+
+		function reset(){
+			document.getElementById("c1").innerHTML="Change will appear here";	
+			
+		}
+		
+	</script>
+</head>
+
+<body>
+	<h1>Browser Object Model(BOM)</h1>
+	<h1>Document Object Model(DOM)</h1>
+	
+	<p id=c1>Change will appear here.</p>
+	<input type="button" value="change" onclick="change()"> <!-- input, img, meta dont hold any content, they are special type of tag so slash is not req  -->
+	
+	<input type="button" value="reset" onclick="reset()">
+
+</body>
+
+</html>
