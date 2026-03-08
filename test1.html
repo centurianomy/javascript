@@ -1,0 +1,71 @@
+<html>
+<head> <title> BOM </title>
+	<script>
+		
+		
+		function add(){
+			var a=document.getElementById("f").value;
+			var b=document.getElementById("s").value;
+			//var c=a+b; //returns concat values	
+			var c=parseInt(a)+parseInt(b);		
+			
+			document.getElementById("ans").innerHTML=c;
+			window.alert("sum is "+c);
+		}
+		
+		function subtract(){
+			var a=document.getElementById("f").value;
+			var b=document.getElementById("s").value;
+			var c=a-b; //returns concat values
+				
+			document.getElementById("ans").innerHTML=c;
+		}
+
+		function multiply(){
+			var a=document.getElementById("f").value;
+			var b=document.getElementById("s").value;
+			var c=a*b;
+	
+			document.getElementById("ans").innerHTML=c;
+		}
+
+		function divide(){
+			var a=document.getElementById("f").value;
+			var b=document.getElementById("s").value;	
+			if(b==0){
+				var c="not defined";
+			}
+
+			else{
+				var c=a/b;
+			}
+								
+			document.getElementById("ans").innerHTML=c;
+		}
+	
+	</script>
+
+</head>
+
+<body>	Enter the values:
+	<br>
+	Enter the a:
+	<input type="text" id="f">
+	<br>
+	Enter the b:	
+	<input type="text" id="s">
+	<br>
+
+	<p>Ans-<p id=ans></p></p>
+
+	<input type="button" value="+" onclick="add()">
+	
+	<input type="button" value="-" onclick="subtract()">
+
+	<input type="button" value="*" onclick="multiply()">
+
+	<input type="button" value="/" onclick="divide()">
+
+</body>
+
+</html>
