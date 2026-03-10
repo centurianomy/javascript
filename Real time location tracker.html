@@ -1,0 +1,37 @@
+<html>
+<head><title>Real-Time Location Tracker</title></head>
+
+<body>
+	<h1>Real-Time Location Tracker</h1>
+	<p id="location"> click the button to track your location. </p>
+	<button onclick="trackLocation()">Track Location</button>	
+
+	<script>
+		function trackLocation()
+		{
+			if("geolocation" in navigator)
+			{
+
+				navigator.geolocation.getCurrentPosition
+				(
+					function(position)
+					{		
+						const latitude=position.coords.latitude;
+						const longitude=position.coords.longitude;
+						const locationText= `Latitude: ${latitude}, Longitude: ${longitude}`;
+						document.getElementById("location").innerText=locationText;		
+					}
+				);
+
+			}
+						
+			else
+			{
+				document.getElementById("location").innerText="Geolocation is not supported by browser";
+			}
+		}
+	
+
+	</script>	
+</body>
+</html>
