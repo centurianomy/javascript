@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<script>
+			let display = document.getElementById("show");
+			let startBtn = document.getElementById("strt");
+			let count=0;
+			let timer;
+ 
+			startBtn.addEventListener("click", function(){
+				timer= setInterval(function(){
+					count++;
+					display.innerTex="Hello";
+					if(count == 5){
+						clearInterval(timer);
+					}					
+				}, 1000);
+			});	
+
+		</script>
+	<head/>
+
+	<body>
+		<h1 id="show">--</h1>
+		<button id="strt">Print</button>
+	</body>
+
+</html>
