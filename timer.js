@@ -11,7 +11,8 @@ let timer;
 //start
 
 startBtn.addEventListener("click", function (){
-	timer = setInterval(function () {
+
+	timer = setInterval(function () {  //timer = value returned by setInterval()
 		count++;
 		timerDisplay.innerText = count;
 
@@ -25,7 +26,7 @@ startBtn.addEventListener("click", function (){
 //pause
 
 pauseBtn.addEventListener("click", function(){
-	clearInterval(timer);
+	clearInterval(timer); //stop this interval id i.e. (timer)  
 });
 
 //restart
