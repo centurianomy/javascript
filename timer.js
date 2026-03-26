@@ -9,7 +9,7 @@ let count = 0;
 let timer;
 
 //start
-
+//using event listeners
 startBtn.addEventListener("click", function (){
 
 	timer = setInterval(function () {  //timer = value returned by setInterval()
