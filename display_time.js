@@ -1,8 +1,11 @@
 function showTime(){
-    let now=  new Date(); //create a new date object to get the current date and time
+    //create a new date object to get the current date and time
+    let now=  new Date(); //returns a timeststap ij milliseconds from the OS
     let hours=now.getHours();//get the current hours, minutes, and seconds
     let minutes=now.getMinutes();
     let seconds=now.getSeconds();
+
+    //adding String + integer --> String by default in js
     if(hours<10){   
         hours="0" + hours; //add a leading zero to hours if it is less than 10
     }
@@ -12,7 +15,7 @@ function showTime(){
     if(seconds<10){
         seconds="0" + seconds;
     }
-
+    //adding strings hrs + mins + sec
     let time=hours + ":" + minutes + ":" + seconds;
     document.getElementById("clk").innerHTML=time;
 }
